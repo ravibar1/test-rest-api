@@ -19,6 +19,7 @@ repositories {
     mavenCentral()
 }
 
+def springProfile='pi'
 
 bootRun {
     bootRun.systemProperty 'spring.profiles.active', "${springProfile}"
