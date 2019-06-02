@@ -4,6 +4,7 @@ import com.example.demo.repository.APIRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.test.context.ContextConfiguration;
@@ -13,9 +14,7 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes = {APIService.class, APIRepository.class})
-@ComponentScan(basePackages = {"com.example.demo"})
-@EnableJpaRepositories("com.example.demo.repository")
+@SpringBootTest
 public class APIServiceTest {
 
     static final String VANAKAM = "Vanakam";
